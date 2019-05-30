@@ -68,12 +68,37 @@ main{
                 color:black;
                 opacity:.8;
                 transition:transform .5s ease-in-out;
+
             }
             i:hover {
                 transform:rotate(180deg);
                 color:red;
                 opacity:1;
             }
+        }
+    }
+    .buttons {
+        margin:0 auto;
+        position:relative;
+        text-align:center;
+        .button {
+            margin:10px;
+            border:none;
+            font-size:20px;
+            text-decoration:none;
+            display:inline-block;
+            text-align:center;
+            padding:7px 25px;
+            background-color:white;
+            cursor:pointer;
+            font-family: system-ui,sans-serif;
+            white-space:nowrap;
+            box-shadow:black 0px 2px 0px 0px;
+            transition:all .3s ease-in-out;
+        }
+        .button:hover {
+            background-color:black;
+            color:white;
         }
     }
 }
