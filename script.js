@@ -33,3 +33,27 @@ function removeItem(){
         });
     }
 }
+
+var saveButton = document.querySelector('#save');
+var clearButton = document.querySelector('#clear');
+var ul = document.querySelector('ul');
+
+function loadList(){
+    if(localStorage.getItem('todoList')){
+        console.log('loaded');
+        ul.innerHTML = localStorage.getItem('todoList');
+        removeItem();
+    }
+}
+
+saveButton.addEventListener('click',function(){
+    localStorage.setItem('todoList', ul.innerHTML);
+        console.log(localStorage);
+})
+
+clearButton.addEventListener('click',function(){
+    ul.innerHTML = "";
+    localStorage.removeItem('todoList', ul.innerHTML);
+})
+
+loadList();

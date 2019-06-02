@@ -91,7 +91,7 @@ main .buttons {
   text-align: center;
 }
 
-main .buttons .button {
+main .buttons button {
   margin: 10px;
   border: none;
   font-size: 20px;
@@ -107,7 +107,12 @@ main .buttons .button {
   transition: all .3s ease-in-out;
 }
 
-main .buttons .button:hover {
+main .buttons button:hover {
   background-color: black;
   color: white;
+}
+
+main .buttons button:focus {
+  outline: none;
+  color: green;
 }
