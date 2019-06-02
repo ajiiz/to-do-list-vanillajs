@@ -9,6 +9,7 @@ document.querySelector('#input').addEventListener('keypress',function(e){
     }
 });
 
+
 function addItemToDo(text) {
     var li = document.createElement("li");
     var spanElement = document.createElement("span");
@@ -17,17 +18,18 @@ function addItemToDo(text) {
     var icon_name = 'fa fa-remove';
 
     icon.classList.add('fa', 'fa-remove');
+    spanElement.classList.add('delete');
     spanElement.append(icon);
     ul.appendChild(li).append(spanElement, text);
 
     removeItem();
-
 }
 
 function removeItem(){
-    var span = document.querySelectorAll('span');
-        span.addEventListener('click',function(){
-            span.parentElement.remove();
-            event.stopPropagation();
+    var temp = document.querySelectorAll('.delete');
+    for(var i = 0; i < temp.length; i++) {
+        temp[i].addEventListener('click',function(){
+            this.parentElement.remove();
         });
+    }
 }
