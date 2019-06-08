@@ -3,24 +3,39 @@ document.querySelector('#input').addEventListener('keypress',function(e){
     if(e.keyCode == 13) {
         var value = document.getElementById('input').value;
         if(value) {
-        addItemToDo(value);
+        checkInput(value);
         document.getElementById('input').value = '';
         }
     }
 });
 
+function checkInput(text) {
+    var temp = document.querySelectorAll('.li-value');
+    var doesExist = false;
+
+    for(var i = 0; i < temp.length; i++) {
+        if(temp[i].innerHTML == text) doesExist = true;
+    }
+    if(doesExist == false) addItemToDo(text);
+    else alert('List item already exist!');
+}
 
 function addItemToDo(text) {
     var li = document.createElement("li");
-    var spanElement = document.createElement("span");
+    var spanElementIcon = document.createElement("span");
     var icon = document.createElement("i");
     var ul = document.querySelector('.todos');
     var icon_name = 'fa fa-remove';
+    var spanElementList = document.createElement("span");
 
+    spanElementList.classList.add('li-value');
+    spanElementList.append(text);
     icon.classList.add('fa', 'fa-remove');
-    spanElement.classList.add('delete');
-    spanElement.append(icon);
-    ul.appendChild(li).append(spanElement, text);
+    li.classList.add('li-text');
+    spanElementIcon.classList.add('delete');
+    spanElementIcon.append(icon);
+
+    ul.appendChild(li).append(spanElementIcon,spanElementList);
 
     removeItem();
 }
