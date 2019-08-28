@@ -8,7 +8,7 @@ body {
 
 main {
   margin: 0 auto;
-  max-width: 400px;
+  width: 40vw;
   position: relative;
   height: 100%;
   background: white;
@@ -60,10 +60,11 @@ main .todos {
 
 main .todos li {
   width: 100%;
-  height: 55px;
-  line-height: 50px;
+  line-height: 40px;
   font-size: 23px;
   transition: 0.3s ease-in-out;
+  word-break: break-all;
+  font-weight: bold;
   box-shadow: black 0px 4px 0px -2px;
 }
 
