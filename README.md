@@ -1,11 +1,30 @@
-## TO-DO-LIST
+# To-do-list vanillajs
+**To-do-list** is simple website to create to-do lists made with vanilla js.
 
-Welcome,
+## Table of contents
+* [Status](#status)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [License](#license)
+* [Contact](#contact)
 
-Application is made in vanilla js with basic functionalities
+## Status
+#### Published live version at: [to-do-list-vanillajs](https://ajiiz.github.io/to-do-list-vanillajs/)
 
-You can add/delete your to-do items into the list and save it using button. Saved to-do-list will be always there for you.
+## Technologies
+#### Project is created with:
+* HTML
+* CSS
+* JS
 
-By using clear button you will clear whole to-do-list forever, so use it wisely.
+## Setup
+* Pull the project from the repository
+```
+git clone https://github.com/ajiiz/to-do-list-vanillajs
+```
 
-Link is in the about section.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Contact
+#### Contact me via e-mail: piotrwrobel.ajiiz@gmail.com
