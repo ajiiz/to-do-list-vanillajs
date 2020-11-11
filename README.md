@@ -1,5 +1,5 @@
 # To-do-list vanillajs
-**To-do-list** is simple website to create to-do lists made with vanilla js.
+**To-do-list** is a simple website to create to-do lists made with vanilla js.
 
 ## Table of contents
 * [Status](#status)
